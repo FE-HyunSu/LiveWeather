@@ -28,4 +28,7 @@ export const GlobalStyle = createGlobalStyle`
             fill: #f2f3f4;
         }
     }
+    header + main{
+        height: calc(100vh - 10rem);
+    }
 `;
