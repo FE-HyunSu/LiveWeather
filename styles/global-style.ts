@@ -29,6 +29,6 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
     header + main{
-        height: calc(100vh - 10rem);
+        height: calc(100vh - 10.2rem);
     }
 `;

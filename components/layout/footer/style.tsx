@@ -1,12 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const FooterBox = styled.footer`
   display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: 5rem;
-  background-color: #fff;
   border-top: 0.1rem solid rgba(0, 0, 0, 0.05);
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
   transition: 0.3s;
+  z-index: 10;
   p {
     display: flex;
     justify-content: center;

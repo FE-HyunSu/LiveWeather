@@ -3,7 +3,9 @@ import { HeaderBox } from './style';
 const Header = () => {
   return (
     <>
-      <HeaderBox>header</HeaderBox>
+      <HeaderBox>
+        <h1>The weather now</h1>
+      </HeaderBox>
     </>
   );
 };

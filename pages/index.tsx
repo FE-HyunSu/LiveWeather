@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { getWeatherInfo } from '../api/api';
 import dayjs from 'dayjs';
+import DataInfo from '../components/dataInfo';
 import BgBoard from '../components/bgBoard';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { currentLocation, nowTimeAtom, nowWeatherAtom } from '../store/store';
 
 const Index = () => {
   const [isLoading, setLoading] = useState<Boolean>(true);
   const [isError, setError] = useState<Boolean>(false);
-  const [isLat, setLat] = useState<Number>(0);
-  const [isLon, setLon] = useState<Number>(0);
   const [isHH, setHH] = useState<Number>(0);
   const [isTimer, setTimer] = useState<String>('');
+  const [useLocation, setUseLocation] = useRecoilState(currentLocation);
+  const [isNowTimeAtom, setNowTimeAtom] = useRecoilState(nowTimeAtom);
+  const [isNowWeatherAtom, setNowWeatherAtom] = useRecoilState(nowWeatherAtom);
 
   const setWeatherInfo = () => {
     try {
@@ -30,6 +34,11 @@ const Index = () => {
       const response = await getWeatherInfo(lat, lon);
       setLoading(false);
       console.log(response);
+      setUseLocation(response.data.name);
+      // setNowWeatherAtom({
+      //   weatherState: response.data.sys.weather[0].main,
+      //   weatherDetail: response.data.sys.weather[0].description,
+      // });
     } catch {
       setLoading(false);
       setError(true);
@@ -37,7 +46,7 @@ const Index = () => {
   };
 
   const timer = () => {
-    setTimer(dayjs().format('YYYY년 MM월 DD일 HH:mm:ss'));
+    setNowTimeAtom(dayjs().format('YYYY/MM/DD HH:mm:ss'));
     setHH(Number(dayjs().format('HH')));
   };
 
@@ -48,12 +57,7 @@ const Index = () => {
 
   return (
     <>
-      <dl>
-        <dt>현재 위치</dt>
-        <dd>위도 : {String(isLat)}</dd>
-        <dd>경도 : {String(isLon)}</dd>
-        <dd>기준 시간 : {isTimer}</dd>
-      </dl>
+      <DataInfo />
       <BgBoard hour={isHH} zIndex={2} />
     </>
   );
