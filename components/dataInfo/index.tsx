@@ -16,16 +16,24 @@ const DataInfo = () => {
   return (
     <>
       <DataInfoBox>
-        <h1>
-          <strong>{recoilLocation}</strong>
-          <span>{recoilNowTime}</span>
-        </h1>
+        <dl>
+          <dt>
+            <strong>{recoilLocation}</strong>
+          </dt>
+          <dd>
+            <span>Search Time : {recoilNowTime}</span>
+          </dd>
+        </dl>
       </DataInfoBox>
       <DataInfoBox>
-        <h1>
-          <strong>{recoilNowWeather.weatherState}</strong>
-          <span>{recoilNowWeather.weatherDetail}</span>
-        </h1>
+        <dl>
+          <dt>
+            <strong>{recoilNowWeather.weatherState}</strong>
+          </dt>
+          <dd>
+            <span>{recoilNowWeather.weatherDetail}</span>
+          </dd>
+        </dl>
       </DataInfoBox>
     </>
   );

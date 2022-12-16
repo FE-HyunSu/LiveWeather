@@ -14,6 +14,7 @@ const Index = () => {
   const [useLocation, setUseLocation] = useRecoilState(currentLocation);
   const [isNowTimeAtom, setNowTimeAtom] = useRecoilState(nowTimeAtom);
   const [isNowWeatherAtom, setNowWeatherAtom] = useRecoilState(nowWeatherAtom);
+  const [isNowWeatherData, setNowWeatherData] = useState<any>(null);
 
   const setWeatherInfo = () => {
     try {
@@ -32,17 +33,23 @@ const Index = () => {
   const getInfoWeather = async (lat: Number, lon: Number) => {
     try {
       const response = await getWeatherInfo(lat, lon);
+      setNowWeatherData(response);
+      weatherDataSet();
       setLoading(false);
-      console.log(response);
-      setUseLocation(response.data.name);
-      // setNowWeatherAtom({
-      //   weatherState: response.data.sys.weather[0].main,
-      //   weatherDetail: response.data.sys.weather[0].description,
-      // });
     } catch {
       setLoading(false);
       setError(true);
     }
+  };
+
+  const weatherDataSet = () => {
+    const data = isNowWeatherData.data;
+    setUseLocation(data.name);
+    setNowWeatherAtom({
+      weatherImg: data.weather[0].main,
+      weatherState: data.weather[0].main,
+      weatherDetail: data.weather[0].description,
+    });
   };
 
   const timer = () => {
@@ -53,6 +60,7 @@ const Index = () => {
   useEffect(() => {
     setWeatherInfo();
     timer();
+    console.log('isNowWeatherData', isNowWeatherData);
   }, [isLoading]);
 
   return (

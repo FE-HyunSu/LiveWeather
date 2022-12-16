@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { BgBoardBox } from './style';
+import { BgBoardBox, BgBoardImgBox } from './style';
+import { useRecoilValue } from 'recoil';
+import { nowWeatherAtom } from '../../store/store';
 
 interface BgBoardType {
   hour: Number;
@@ -7,6 +9,7 @@ interface BgBoardType {
 }
 
 const BgBoard = ({ hour, zIndex }: BgBoardType) => {
+  const recoilWeatherBg = useRecoilValue(nowWeatherAtom);
   const [colorCode, setColorCode] = useState<String>('#fff');
   // 4:00 ~ 8:00 : #bbb;
   // 9:00 ~ 12:00 : #fff;
@@ -31,6 +34,7 @@ const BgBoard = ({ hour, zIndex }: BgBoardType) => {
 
   return (
     <>
+      <BgBoardImgBox className={recoilWeatherBg.weatherState}></BgBoardImgBox>
       <BgBoardBox
         style={{ backgroundColor: String(colorCode), zIndex: Number(zIndex) }}
       ></BgBoardBox>
