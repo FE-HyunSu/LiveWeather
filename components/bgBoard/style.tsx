@@ -12,9 +12,9 @@ export const BgBoardBox = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
-  opacity: 0.3;
+  background-color: #000;
   transition: 1s;
-  z-index: -1;
+  z-index: 2;
 `;
 
 export const BgBoardImgBox = styled.div`
@@ -24,7 +24,6 @@ export const BgBoardImgBox = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
-  opacity: 0.3;
   z-index: 2;
   &.Clouds {
     background: url(./images/bg_clouds.png) repeat-x 0 0 / cover;

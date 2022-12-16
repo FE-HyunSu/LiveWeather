@@ -10,34 +10,27 @@ interface BgBoardType {
 
 const BgBoard = ({ hour, zIndex }: BgBoardType) => {
   const recoilWeatherBg = useRecoilValue(nowWeatherAtom);
-  const [colorCode, setColorCode] = useState<String>('#fff');
-  // 4:00 ~ 8:00 : #bbb;
-  // 9:00 ~ 12:00 : #fff;
-  // 13:00 ~ 17:00 : #eee;
-  // 18:00 ~ 20:00 : #aaa;
-  // 21:00 이상. or 0:00 ~ 3:00 : #000;
+  const [opacityCode, setOpacityCode] = useState<Number>(0);
   useEffect(() => {
-    setColorCode(
+    setOpacityCode(
       21 <= hour || hour <= 3
-        ? '#000'
+        ? 0.5
         : 18 <= hour
-        ? '#aaa'
+        ? 0.4
         : 13 <= hour
-        ? '#eee'
+        ? 0.2
         : 9 <= hour
-        ? '#fff'
+        ? 0
         : 4 <= hour
-        ? '#bbb'
-        : '#fff'
+        ? 0.3
+        : 0
     );
-  }, []);
+  }, [opacityCode]);
 
   return (
     <>
       <BgBoardImgBox className={recoilWeatherBg.weatherState}></BgBoardImgBox>
-      <BgBoardBox
-        style={{ backgroundColor: String(colorCode), zIndex: Number(zIndex) }}
-      ></BgBoardBox>
+      <BgBoardBox style={{ opacity: Number(opacityCode) }}></BgBoardBox>
     </>
   );
 };
