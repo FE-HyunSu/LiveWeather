@@ -48,6 +48,8 @@ export const DataInfoBox = styled.div`
         text-transform: uppercase;
       }
       span {
+        display: inline-block;
+        padding-top: 0.5rem;
         font-weight: 400;
         font-size: 1.2rem;
         color: #fff;
@@ -62,6 +64,8 @@ export const DataInfoBox = styled.div`
         text-transform: uppercase;
       }
       span {
+        display: inline-block;
+        padding-top: 0.5rem;
         font-weight: 400;
         font-size: 1.2rem;
         color: #fff;

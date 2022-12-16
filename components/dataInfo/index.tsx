@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { DataInfoBox } from './style';
 import { useRecoilValue } from 'recoil';
 import { currentLocation, nowTimeAtom, nowWeatherAtom } from '../../store/store';
 
 const DataInfo = () => {
-  const [colorCode, setColorCode] = useState<String>('#fff');
   const recoilLocation = useRecoilValue(currentLocation);
   const recoilNowTime = useRecoilValue(nowTimeAtom);
   const recoilNowWeather = useRecoilValue(nowWeatherAtom);
-
-  useEffect(() => {
-    // console.log('test');
-  }, []);
 
   return (
     <>

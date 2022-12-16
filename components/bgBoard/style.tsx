@@ -37,11 +37,15 @@ export const BgBoardImgBox = styled.div`
     background: url(./images/bg_overcastclouds.png) repeat-x 0 0 / cover;
     animation: ${bgMotion} 30s infinite;
   }
+  &.broken-clouds {
+    background: url(./images/bg_brokenclouds.png) repeat-x 0 0 / cover;
+    animation: ${bgMotion} 30s infinite;
+  }
 
   // * sky-is-clear
   // * few-clouds
   // * scattered-clouds
-  //broken-clouds
+  // * broken-clouds
   // * overcast-clouds
   //shower-rain
   //light-rain

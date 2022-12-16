@@ -5,6 +5,7 @@ import DataInfo from '../components/dataInfo';
 import BgBoard from '../components/bgBoard';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { currentLocation, nowTimeAtom, nowWeatherAtom } from '../store/store';
+import Loading from '../components/loading';
 
 const Index = () => {
   const [isLoading, setLoading] = useState<Boolean>(true);
@@ -35,9 +36,9 @@ const Index = () => {
       const response = await getWeatherInfo(lat, lon);
       setNowWeatherData(response);
       weatherDataSet();
-      setLoading(false);
+      // setLoading(false);
     } catch {
-      setLoading(false);
+      // setLoading(false);
       setError(true);
     }
   };
@@ -65,8 +66,14 @@ const Index = () => {
 
   return (
     <>
-      <DataInfo />
-      <BgBoard hour={isHH} />
+      {isLoading && isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          <DataInfo />
+          <BgBoard hour={isHH} />
+        </>
+      )}
     </>
   );
 };
