@@ -27,31 +27,46 @@ export const BgBoardImgBox = styled.div`
   z-index: 2;
   &.sky-is-clear {
     background: url(./images/bg_skyisclear.png) repeat-x 0 0 / cover;
-    animation: ${bgMotion} 30s infinite;
+    animation: ${bgMotion} 40s linear infinite;
   }
   &.few-clouds {
     background: url(./images/bg_fewclouds.png) repeat-x 0 0 / cover;
-    animation: ${bgMotion} 30s infinite;
+    animation: ${bgMotion} 40s linear infinite;
   }
   &.overcast-clouds {
     background: url(./images/bg_overcastclouds.png) repeat-x 0 0 / cover;
-    animation: ${bgMotion} 30s infinite;
+    animation: ${bgMotion} 40s linear infinite;
   }
   &.broken-clouds {
     background: url(./images/bg_brokenclouds.png) repeat-x 0 0 / cover;
-    animation: ${bgMotion} 30s infinite;
+    animation: ${bgMotion} 40s linear infinite;
   }
-
-  // * sky-is-clear
-  // * few-clouds
-  // * scattered-clouds
-  // * broken-clouds
-  // * overcast-clouds
-  //shower-rain
-  //light-rain
-  //moderate-rain
-  //rain
-  //thunderstorm
-  //snow
-  //mist
+  &.shower-rain {
+    background: url(./images/bg_showerrain.png) repeat-x 0 0 / cover;
+    animation: ${bgMotion} 40s linear infinite;
+  }
+  &.light-rain {
+    background: url(./images/bg_lightrain.png) repeat-x 0 0 / cover;
+    animation: ${bgMotion} 40s linear infinite;
+  }
+  &.moderate-rain {
+    background: url(./images/bg_moderaterain.png) repeat-x 0 0 / cover;
+    animation: ${bgMotion} 40s linear infinite;
+  }
+  &.rain {
+    background: url(./images/bg_rain.png) repeat-x 0 0 / cover;
+    animation: ${bgMotion} 40s linear infinite;
+  }
+  &.thunderstorm {
+    background: url(./images/bg_thunderstorm.png) repeat-x 0 0 / cover;
+    animation: ${bgMotion} 40s linear infinite;
+  }
+  &.snow {
+    background: url(./images/bg_snow.png) repeat-x 0 0 / cover;
+    animation: ${bgMotion} 40s linear infinite;
+  }
+  &.mist {
+    background: url(./images/bg_mist.png) repeat-x 0 0 / cover;
+    animation: ${bgMotion} 40s linear infinite;
+  }
 `;

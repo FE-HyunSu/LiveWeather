@@ -36,9 +36,9 @@ const Index = () => {
       const response = await getWeatherInfo(lat, lon);
       setNowWeatherData(response);
       weatherDataSet();
-      // setLoading(false);
+      setLoading(false);
     } catch {
-      // setLoading(false);
+      setLoading(false);
       setError(true);
     }
   };
