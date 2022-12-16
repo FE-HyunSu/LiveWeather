@@ -3,40 +3,41 @@ import { getWeatherInfo } from '../api/api';
 import dayjs from 'dayjs';
 import DataInfo from '../components/dataInfo';
 import BgBoard from '../components/bgBoard';
-import { useRecoilState, useRecoilValue } from 'recoil';
-import { currentLocation, nowTimeAtom, nowWeatherAtom } from '../store/store';
 import Loading from '../components/loading';
+import ErrorBox from '../components/error';
+import { useRecoilState } from 'recoil';
+import { currentLocation, nowTimeAtom, nowWeatherAtom } from '../store/store';
 
 const Index = () => {
   const [isLoading, setLoading] = useState<Boolean>(true);
   const [isError, setError] = useState<Boolean>(false);
   const [isHH, setHH] = useState<Number>(0);
-  const [isTimer, setTimer] = useState<String>('');
   const [useLocation, setUseLocation] = useRecoilState(currentLocation);
   const [isNowTimeAtom, setNowTimeAtom] = useRecoilState(nowTimeAtom);
   const [isNowWeatherAtom, setNowWeatherAtom] = useRecoilState(nowWeatherAtom);
   const [isNowWeatherData, setNowWeatherData] = useState<any>(null);
 
-  const setWeatherInfo = () => {
+  const getInfoWeather = async (lat: Number, lon: Number) => {
     try {
-      navigator.geolocation.getCurrentPosition((position) => {
-        getInfoWeather(
-          Number(position.coords.latitude.toFixed(2)),
-          Number(position.coords.longitude.toFixed(2))
-        );
-      });
+      const response = await getWeatherInfo(lat, lon);
+      await setNowWeatherData(response);
+      await weatherDataSet();
+      setError(false);
+      setLoading(false);
     } catch {
       setLoading(false);
       setError(true);
     }
   };
 
-  const getInfoWeather = async (lat: Number, lon: Number) => {
+  const setWeatherInfo = async () => {
     try {
-      const response = await getWeatherInfo(lat, lon);
-      setNowWeatherData(response);
-      weatherDataSet();
-      setLoading(false);
+      await navigator.geolocation.getCurrentPosition((position) => {
+        getInfoWeather(
+          Number(position.coords.latitude.toFixed(2)),
+          Number(position.coords.longitude.toFixed(2))
+        );
+      });
     } catch {
       setLoading(false);
       setError(true);
@@ -61,13 +62,14 @@ const Index = () => {
   useEffect(() => {
     setWeatherInfo();
     timer();
-    console.log('isNowWeatherData', isNowWeatherData);
-  }, [isLoading]);
+  }, [isLoading, isError]);
 
   return (
     <>
       {isLoading && isLoading ? (
         <Loading />
+      ) : isError && isError ? (
+        <ErrorBox />
       ) : (
         <>
           <DataInfo />

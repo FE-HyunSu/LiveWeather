@@ -9,7 +9,7 @@ export const HeaderBox = styled.header`
   z-index: 10;
   h1 {
     font-weight: 200;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
     text-transform: uppercase;
   }

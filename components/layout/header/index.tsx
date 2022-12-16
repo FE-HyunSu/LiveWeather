@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
       <HeaderBox>
-        <h1>The weather now</h1>
+        <h1>Live weather information</h1>
       </HeaderBox>
     </>
   );
