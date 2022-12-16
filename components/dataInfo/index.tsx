@@ -3,7 +3,7 @@ import { DataInfoBox } from './style';
 import { useRecoilValue } from 'recoil';
 import { currentLocation, nowTimeAtom, nowWeatherAtom } from '../../store/store';
 
-const DataInfo = () => {
+const DataInfo = ({ resetInfo }: any) => {
   const recoilLocation = useRecoilValue(currentLocation);
   const recoilNowTime = useRecoilValue(nowTimeAtom);
   const recoilNowWeather = useRecoilValue(nowWeatherAtom);
@@ -20,7 +20,7 @@ const DataInfo = () => {
           </dd>
         </dl>
       </DataInfoBox>
-      <DataInfoBox>
+      <DataInfoBox style={{ animationDelay: `.5s` }}>
         <dl>
           <dt>
             <em>{recoilNowWeather.weatherTemp}</em>
@@ -30,6 +30,13 @@ const DataInfo = () => {
             <span>{recoilNowWeather.weatherDetail}</span>
           </dd>
         </dl>
+      </DataInfoBox>
+      <DataInfoBox style={{ animationDelay: `1s` }}>
+        <div className="btn-reflesh">
+          <button type="button" onClick={() => resetInfo()}>
+            새로고침
+          </button>
+        </div>
       </DataInfoBox>
     </>
   );

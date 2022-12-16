@@ -1,4 +1,14 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const viewMotion = keyframes`
+  0%{opacity:0; transform:translateX(-3rem);}
+  100%{opacity:1; transform:translateX(0);}
+`;
+
+const turnMotion = keyframes`
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(-360deg);}
+`;
 
 export const DataInfoBox = styled.div`
   display: block;
@@ -7,6 +17,10 @@ export const DataInfoBox = styled.div`
   margin: auto;
   padding: 4rem 4rem 2rem 4rem;
   text-align: center;
+  animation: ${viewMotion} 1s forwards;
+  opacity: 0;
+  transform: translateX(-3rem);
+  overflow: auto;
   z-index: 5;
   &:after {
     content: '';
@@ -25,6 +39,7 @@ export const DataInfoBox = styled.div`
       em {
         display: inline-block;
         position: relative;
+        padding-right: 2rem;
         font-weight: 100;
         font-size: 8rem;
         color: #fff;
@@ -32,11 +47,11 @@ export const DataInfoBox = styled.div`
         &:after {
           content: '';
           position: absolute;
-          top: 0.5rem;
-          right: -1.5rem;
+          top: 0.8rem;
+          right: 0.4rem;
           width: 0.6rem;
           height: 0.6rem;
-          border: 0.1rem solid #fff;
+          border: 0.2rem solid #fff;
           border-radius: 100%;
         }
       }
@@ -69,6 +84,51 @@ export const DataInfoBox = styled.div`
         font-weight: 400;
         font-size: 1.2rem;
         color: #fff;
+      }
+    }
+  }
+  .btn-reflesh {
+    float: right;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-indent: -9999rem;
+      animation: ${turnMotion} 5s linear infinite;
+      z-index: 2;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 60%;
+        height: 60%;
+        margin: auto;
+        border-top: 0.1rem solid #fff;
+        border-bottom: 0.1rem solid #fff;
+        border-left: 0.1rem solid #fff;
+        border-radius: 100%;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 1.6rem;
+        right: 0;
+        bottom: 0;
+        left: 2.5rem;
+        width: 1rem;
+        height: 1rem;
+        margin: auto;
+        border-top: 0.1rem solid #fff;
+        border-right: 0.1rem solid #fff;
+        transform: rotate(-15deg);
       }
     }
   }

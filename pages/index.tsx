@@ -52,11 +52,18 @@ const Index = () => {
       weatherState: data.weather[0].main,
       weatherDetail: data.weather[0].description,
     });
+    console.log(data);
   };
 
   const timer = () => {
     setNowTimeAtom(dayjs().format('YYYY/MM/DD HH:mm:ss'));
     setHH(Number(dayjs().format('HH')));
+  };
+
+  const resetInfo = () => {
+    setLoading(true);
+    setWeatherInfo();
+    timer();
   };
 
   useEffect(() => {
@@ -72,7 +79,7 @@ const Index = () => {
         <ErrorBox />
       ) : (
         <>
-          <DataInfo />
+          <DataInfo resetInfo={resetInfo} />
           <BgBoard hour={isHH} />
         </>
       )}
