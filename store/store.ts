@@ -13,7 +13,7 @@ export const nowTimeAtom = atom({
 export const nowWeatherAtom = atom({
   key: 'nowWeatherAtom',
   default: {
-    weatherImg: '',
+    weatherTemp: '',
     weatherState: '',
     weatherDetail: '',
   },

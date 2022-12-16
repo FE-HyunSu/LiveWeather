@@ -46,7 +46,7 @@ const Index = () => {
     const data = isNowWeatherData.data;
     setUseLocation(data.name);
     setNowWeatherAtom({
-      weatherImg: data.weather[0].main,
+      weatherTemp: data.main.temp,
       weatherState: data.weather[0].main,
       weatherDetail: data.weather[0].description,
     });
@@ -66,7 +66,7 @@ const Index = () => {
   return (
     <>
       <DataInfo />
-      <BgBoard hour={isHH} zIndex={2} />
+      <BgBoard hour={isHH} />
     </>
   );
 };

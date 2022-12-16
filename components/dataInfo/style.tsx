@@ -22,6 +22,24 @@ export const DataInfoBox = styled.div`
   }
   dl {
     dt {
+      em {
+        display: inline-block;
+        position: relative;
+        font-weight: 100;
+        font-size: 8rem;
+        color: #fff;
+        text-transform: uppercase;
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0.5rem;
+          right: -1.5rem;
+          width: 0.6rem;
+          height: 0.6rem;
+          border: 0.1rem solid #fff;
+          border-radius: 100%;
+        }
+      }
       strong {
         display: block;
         font-weight: 200;

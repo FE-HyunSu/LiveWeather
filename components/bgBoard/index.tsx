@@ -5,10 +5,9 @@ import { nowWeatherAtom } from '../../store/store';
 
 interface BgBoardType {
   hour: Number;
-  zIndex: Number;
 }
 
-const BgBoard = ({ hour, zIndex }: BgBoardType) => {
+const BgBoard = ({ hour }: BgBoardType) => {
   const recoilWeatherBg = useRecoilValue(nowWeatherAtom);
   const [opacityCode, setOpacityCode] = useState<Number>(0);
   useEffect(() => {
@@ -29,7 +28,9 @@ const BgBoard = ({ hour, zIndex }: BgBoardType) => {
 
   return (
     <>
-      <BgBoardImgBox className={recoilWeatherBg.weatherState}></BgBoardImgBox>
+      <BgBoardImgBox
+        className={recoilWeatherBg.weatherDetail.replaceAll(' ', '-').toLowerCase()}
+      ></BgBoardImgBox>
       <BgBoardBox style={{ opacity: Number(opacityCode) }}></BgBoardBox>
     </>
   );

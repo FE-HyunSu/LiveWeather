@@ -25,8 +25,29 @@ export const BgBoardImgBox = styled.div`
   width: 100%;
   height: 100vh;
   z-index: 2;
-  &.Clouds {
-    background: url(./images/bg_clouds.png) repeat-x 0 0 / cover;
+  &.sky-is-clear {
+    background: url(./images/bg_skyisclear.png) repeat-x 0 0 / cover;
     animation: ${bgMotion} 30s infinite;
   }
+  &.few-clouds {
+    background: url(./images/bg_fewclouds.png) repeat-x 0 0 / cover;
+    animation: ${bgMotion} 30s infinite;
+  }
+  &.overcast-clouds {
+    background: url(./images/bg_overcastclouds.png) repeat-x 0 0 / cover;
+    animation: ${bgMotion} 30s infinite;
+  }
+
+  // * sky-is-clear
+  // * few-clouds
+  // * scattered-clouds
+  //broken-clouds
+  // * overcast-clouds
+  //shower-rain
+  //light-rain
+  //moderate-rain
+  //rain
+  //thunderstorm
+  //snow
+  //mist
 `;

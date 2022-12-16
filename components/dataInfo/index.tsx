@@ -28,6 +28,7 @@ const DataInfo = () => {
       <DataInfoBox>
         <dl>
           <dt>
+            <em>{recoilNowWeather.weatherTemp}</em>
             <strong>{recoilNowWeather.weatherState}</strong>
           </dt>
           <dd>
