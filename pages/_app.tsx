@@ -13,11 +13,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <RecoilRoot>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta property="og:title" content="Project title" />
+          <meta property="og:title" content="🌦 Live weather information" />
           <meta property="og:description" content="Project description" />
           <meta property="og:image" content="" />
           <link rel="icon" href="/favicon.ico" />
-          <title>Project Name</title>
+          <title>🌦 Live weather information</title>
         </Head>
         <GlobalStyle />
         <ThemeProvider theme={theme}>

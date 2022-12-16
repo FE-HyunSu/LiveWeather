@@ -1,7 +1,5 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import Header from '../components/layout/header';
-import Footer from '../components/layout/footer';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
