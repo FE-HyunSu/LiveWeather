@@ -1,8 +1,8 @@
-## 🚉 Live Weather information.
+## 🌦 Live Weather information.
 
 ### 🏂 URL
 
-- page : [https://subwayinfo.netlify.app](https://subwayinfo.netlify.app)
+- page : [https://hsliveweather.netlify.app](https://hsliveweather.netlify.app)
 
 ### 🛩 금번 프로젝트에서 경험 하고싶은 주요 기능.
 - 공공 Open API 활용. 장단점 체크.
