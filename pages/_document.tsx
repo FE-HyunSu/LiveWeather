@@ -32,12 +32,12 @@ class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <link rel="shortcut icon" href="/favicon.ico" type="image/svg" />
-          <meta property="og:title" content="" />
-          <meta property="og:image" content="" />
-          <meta property="og:description" content="" />
-          <meta property="og:url" content="" />
-          <meta name="description" content="" />
-          <meta name="keywords" content="" />
+          <meta property="og:title" content="Live weather information" />
+          <meta property="og:image" content="/img_meta.png" />
+          <meta property="og:description" content="Live weather information" />
+          <meta property="og:url" content="https://hsliveweather.netlify.app" />
+          <meta name="description" content="Live weather information" />
+          <meta name="keywords" content="Live weather information" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap"
