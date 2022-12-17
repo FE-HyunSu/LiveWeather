@@ -44,6 +44,7 @@ export const DataInfoBox = styled.div`
         font-size: 8rem;
         color: #fff;
         text-transform: uppercase;
+        z-index: 2;
         &:after {
           content: '';
           position: absolute;
@@ -57,33 +58,41 @@ export const DataInfoBox = styled.div`
       }
       strong {
         display: block;
+        position: relative;
         font-weight: 200;
         font-size: 4rem;
         color: #fff;
         text-transform: uppercase;
+        z-index: 2;
       }
       span {
         display: inline-block;
+        position: relative;
         padding-top: 0.5rem;
         font-weight: 400;
         font-size: 1.2rem;
         color: #fff;
+        z-index: 2;
       }
     }
     dd {
       strong {
         display: block;
+        position: relative;
         font-weight: 200;
         font-size: 4rem;
         color: #fff;
         text-transform: uppercase;
+        z-index: 2;
       }
       span {
         display: inline-block;
+        position: relative;
         padding-top: 0.5rem;
         font-weight: 400;
         font-size: 1.2rem;
         color: #fff;
+        z-index: 2;
       }
     }
   }

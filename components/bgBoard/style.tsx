@@ -65,6 +65,10 @@ export const BgBoardImgBox = styled.div`
     background: url(./images/bg_snow.png) repeat-x 0 0 / cover;
     animation: ${bgMotion} 40s linear infinite;
   }
+  &.light-snow {
+    background: url(./images/bg_lightsnow.png) repeat-x 0 0 / cover;
+    animation: ${bgMotion} 40s linear infinite;
+  }
   &.mist {
     background: url(./images/bg_mist.png) repeat-x 0 0 / cover;
     animation: ${bgMotion} 40s linear infinite;
