@@ -20,7 +20,6 @@ export const DataInfoBox = styled.div`
   animation: ${viewMotion} 1s forwards;
   opacity: 0;
   transform: translateX(-3rem);
-  overflow: auto;
   z-index: 5;
   &:after {
     content: '';
@@ -42,7 +41,7 @@ export const DataInfoBox = styled.div`
         padding-right: 2rem;
         font-weight: 100;
         font-size: 8rem;
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 0.9);
         text-transform: uppercase;
         z-index: 2;
         &:after {

@@ -56,7 +56,6 @@ const Index = () => {
       windDeg: data.wind.deg,
       windSpeed: data.wind.speed,
     });
-    console.log(data);
   };
 
   const timer = () => {
@@ -73,7 +72,7 @@ const Index = () => {
   useEffect(() => {
     setWeatherInfo();
     timer();
-  }, [isLoading, isError]);
+  }, [isLoading]);
 
   return (
     <>

@@ -6,7 +6,8 @@ export const HeaderBox = styled.header`
   justify-content: center;
   align-items: center;
   height: 5rem;
-  border: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
   z-index: 5;
   h1 {
     font-weight: 200;

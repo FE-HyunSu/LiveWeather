@@ -7,8 +7,8 @@ export const FooterBox = styled.footer`
   left: 0;
   width: 100%;
   height: 5rem;
-  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
-  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
   transition: 0.3s;
   z-index: 5;
   p {

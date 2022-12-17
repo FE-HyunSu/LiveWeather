@@ -13,7 +13,7 @@ export const BgBoardBox = styled.div`
   width: 100%;
   height: 100vh;
   background-color: #000;
-  transition: 1s;
+  transition: 0.3s;
   z-index: 2;
 `;
 

@@ -14,7 +14,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta property="og:title" content="🌦 Live weather information" />
-          <meta property="og:description" content="Project description" />
+          <meta property="og:description" content="☀️🌤⛅️🌥☁️🌦🌧⛈🌩🌨💨🌪 Weather information" />
           <meta property="og:image" content="/img_meta.png" />
           <link rel="icon" href="/favicon.ico" />
           <title>🌦 Live weather information</title>

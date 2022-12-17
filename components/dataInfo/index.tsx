@@ -46,21 +46,21 @@ const DataInfo = ({ resetInfo }: any) => {
           >
             <SwiperSlide>
               <p>
-                max temp : <span>{recoilNowWeather.weatherTempMax}</span>
+                ☀️ max temp : <span>{recoilNowWeather.weatherTempMax}</span>
               </p>
             </SwiperSlide>
             <SwiperSlide>
               <p>
-                min temp : <span>{recoilNowWeather.weatherTempMin}</span>
+                🌥 min temp : <span>{recoilNowWeather.weatherTempMin}</span>
               </p>
             </SwiperSlide>
             <SwiperSlide>
               <p>
-                wind deg : <span>{recoilNowWeather.windDeg}</span>
+                🧭 wind deg : <span>{recoilNowWeather.windDeg}</span>
               </p>
             </SwiperSlide>
             <SwiperSlide>
-              <p>wind speed : {recoilNowWeather.windSpeed}m/s</p>
+              <p>🌊 wind speed : {recoilNowWeather.windSpeed}m/s</p>
             </SwiperSlide>
           </Swiper>
           <button type="button" className="btn-reflesh" onClick={() => resetInfo()}>
