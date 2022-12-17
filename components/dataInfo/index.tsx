@@ -41,7 +41,7 @@ const DataInfo = ({ resetInfo }: any) => {
             className="etc-info-slide"
             direction={'vertical'}
             autoHeight={true}
-            // loopedSlides={1}
+            slidesPerView={1}
             autoplay={{ delay: 3000 }}
           >
             <SwiperSlide>

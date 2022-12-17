@@ -42,7 +42,7 @@ export const DataInfoBox = styled.div`
         padding-right: 2rem;
         font-weight: 100;
         font-size: 8rem;
-        color: #fff;
+        color: rgba(255, 255, 255, 0.7);
         text-transform: uppercase;
         z-index: 2;
         &:after {
@@ -52,7 +52,7 @@ export const DataInfoBox = styled.div`
           right: 0.4rem;
           width: 0.6rem;
           height: 0.6rem;
-          border: 0.2rem solid #fff;
+          border: 0.2rem solid rgba(255, 255, 255, 0.7);
           border-radius: 100%;
         }
       }
@@ -61,7 +61,7 @@ export const DataInfoBox = styled.div`
         position: relative;
         font-weight: 200;
         font-size: 4rem;
-        color: #fff;
+        color: rgba(255, 255, 255, 0.7);
         text-transform: uppercase;
         z-index: 2;
       }
@@ -71,7 +71,7 @@ export const DataInfoBox = styled.div`
         padding-top: 0.5rem;
         font-weight: 400;
         font-size: 1.2rem;
-        color: #fff;
+        color: rgba(255, 255, 255, 0.7);
         z-index: 2;
       }
     }
@@ -81,7 +81,7 @@ export const DataInfoBox = styled.div`
         position: relative;
         font-weight: 200;
         font-size: 4rem;
-        color: #fff;
+        color: rgba(255, 255, 255, 0.7);
         text-transform: uppercase;
         z-index: 2;
       }
@@ -91,7 +91,7 @@ export const DataInfoBox = styled.div`
         padding-top: 0.5rem;
         font-weight: 400;
         font-size: 1.2rem;
-        color: #fff;
+        color: rgba(255, 255, 255, 0.7);
         z-index: 2;
       }
     }
@@ -118,9 +118,9 @@ export const DataInfoBox = styled.div`
       width: 60%;
       height: 60%;
       margin: auto;
-      border-top: 0.1rem solid #fff;
-      border-bottom: 0.1rem solid #fff;
-      border-left: 0.1rem solid #fff;
+      border-top: 0.1rem solid rgba(255, 255, 255, 0.7);
+      border-bottom: 0.1rem solid rgba(255, 255, 255, 0.7);
+      border-left: 0.1rem solid rgba(255, 255, 255, 0.7);
       border-radius: 100%;
     }
     &:after {
@@ -133,8 +133,8 @@ export const DataInfoBox = styled.div`
       width: 1rem;
       height: 1rem;
       margin: auto;
-      border-top: 0.1rem solid #fff;
-      border-right: 0.1rem solid #fff;
+      border-top: 0.1rem solid rgba(255, 255, 255, 0.7);
+      border-right: 0.1rem solid rgba(255, 255, 255, 0.7);
       transform: rotate(-15deg);
     }
   }
@@ -148,10 +148,10 @@ export const DataInfoBox = styled.div`
       justify-content: center;
       align-items: center;
       height: 100%;
-      padding-left: 5rem;
+      padding-left: 4rem;
       font-weight: 200;
       font-size: 2rem;
-      color: #fff;
+      color: rgba(255, 255, 255, 0.7);
       span {
         display: inline-block;
         position: relative;
@@ -162,7 +162,7 @@ export const DataInfoBox = styled.div`
           right: -0.6rem;
           width: 0.2rem;
           height: 0.2rem;
-          border: 0.1rem solid #fff;
+          border: 0.1rem solid rgba(255, 255, 255, 0.7);
           border-radius: 100%;
         }
       }

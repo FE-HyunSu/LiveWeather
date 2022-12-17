@@ -10,20 +10,12 @@ interface BgBoardType {
 const BgBoard = ({ hour }: BgBoardType) => {
   const recoilWeatherBg = useRecoilValue(nowWeatherAtom);
   const [opacityCode, setOpacityCode] = useState<Number>(0);
+  // hour : 0 ~ 12 ~ 24
+  // opacity : 100% ~ 0% ~ 100%
+  // 12:00를 0에 수렴하도록 계산.
+  const oneHour = Math.round((1 / 12) * 100) / 100; // 0.08
   useEffect(() => {
-    setOpacityCode(
-      21 <= hour || hour <= 3
-        ? 0.5
-        : 18 <= hour
-        ? 0.4
-        : 13 <= hour
-        ? 0.2
-        : 9 <= hour
-        ? 0
-        : 4 <= hour
-        ? 0.3
-        : 0
-    );
+    setOpacityCode(Math.abs(Number(hour) - 12) * oneHour);
   }, [opacityCode]);
 
   return (
