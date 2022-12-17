@@ -13,7 +13,7 @@ const BgBoard = ({ hour }: BgBoardType) => {
   // hour : 0 ~ 12 ~ 24
   // opacity : 100% ~ 0% ~ 100%
   // 12:00를 0에 수렴하도록 계산.
-  const oneHour = Math.round((1 / 12) * 100) / 100; // 0.08
+  const oneHour = Math.round((1 / 12) * 80) / 100; // 0.07
   useEffect(() => {
     setOpacityCode(Math.abs(Number(hour) - 12) * oneHour);
   }, [opacityCode]);

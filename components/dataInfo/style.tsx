@@ -139,6 +139,8 @@ export const DataInfoBox = styled.div`
   }
   .etc-info-slide {
     flex: 1 1;
+    height: 5rem;
+    overflow: hidden;
   }
   .swiper-slide {
     text-align: left;
