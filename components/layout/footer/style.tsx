@@ -7,10 +7,10 @@ export const FooterBox = styled.footer`
   left: 0;
   width: 100%;
   height: 5rem;
-  border-top: 0.1rem solid rgba(0, 0, 0, 0.05);
-  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
   transition: 0.3s;
-  z-index: 10;
+  z-index: 5;
   p {
     display: flex;
     justify-content: center;
@@ -19,13 +19,13 @@ export const FooterBox = styled.footer`
     margin: 0;
     padding: 0;
     font-weight: 300;
-    font-size: 1.4rem;
-    color: rgba(0, 0, 0, 0.4);
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.5);
     text-align: center;
     a {
       display: inline-block;
       width: 4rem;
-      opacity: 0.5;
+      opacity: 0.3;
       transition: 0.3s;
       svg {
         width: 80%;
