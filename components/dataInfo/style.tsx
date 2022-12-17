@@ -96,48 +96,75 @@ export const DataInfoBox = styled.div`
       }
     }
   }
+  .multi-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .btn-reflesh {
-    float: right;
     position: relative;
     width: 5rem;
     height: 5rem;
-    button {
+    text-indent: -9999rem;
+    animation: ${turnMotion} 5s linear infinite;
+    z-index: 2;
+    &:before {
+      content: '';
       position: absolute;
       top: 0;
+      right: 0;
+      bottom: 0;
       left: 0;
-      width: 100%;
+      width: 60%;
+      height: 60%;
+      margin: auto;
+      border-top: 0.1rem solid #fff;
+      border-bottom: 0.1rem solid #fff;
+      border-left: 0.1rem solid #fff;
+      border-radius: 100%;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 1.6rem;
+      right: 0;
+      bottom: 0;
+      left: 2.5rem;
+      width: 1rem;
+      height: 1rem;
+      margin: auto;
+      border-top: 0.1rem solid #fff;
+      border-right: 0.1rem solid #fff;
+      transform: rotate(-15deg);
+    }
+  }
+  .etc-info-slide {
+    flex: 1 1;
+  }
+  .swiper-slide {
+    text-align: left;
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 100%;
-      text-indent: -9999rem;
-      animation: ${turnMotion} 5s linear infinite;
-      z-index: 2;
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 60%;
-        height: 60%;
-        margin: auto;
-        border-top: 0.1rem solid #fff;
-        border-bottom: 0.1rem solid #fff;
-        border-left: 0.1rem solid #fff;
-        border-radius: 100%;
-      }
-      &:after {
-        content: '';
-        position: absolute;
-        top: 1.6rem;
-        right: 0;
-        bottom: 0;
-        left: 2.5rem;
-        width: 1rem;
-        height: 1rem;
-        margin: auto;
-        border-top: 0.1rem solid #fff;
-        border-right: 0.1rem solid #fff;
-        transform: rotate(-15deg);
+      padding-left: 5rem;
+      font-weight: 200;
+      font-size: 2rem;
+      color: #fff;
+      span {
+        display: inline-block;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          top: -0.2rem;
+          right: -0.6rem;
+          width: 0.2rem;
+          height: 0.2rem;
+          border: 0.1rem solid #fff;
+          border-radius: 100%;
+        }
       }
     }
   }

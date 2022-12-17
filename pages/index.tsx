@@ -46,11 +46,16 @@ const Index = () => {
 
   const weatherDataSet = () => {
     const data = isNowWeatherData.data;
+    console.log(data);
     setUseLocation(data.name);
     setNowWeatherAtom({
       weatherTemp: data.main.temp,
       weatherState: data.weather[0].main,
       weatherDetail: data.weather[0].description,
+      weatherTempMax: data.main.temp_max,
+      weatherTempMin: data.main.temp_min,
+      windDeg: data.wind.deg,
+      windSpeed: data.wind.speed,
     });
     console.log(data);
   };

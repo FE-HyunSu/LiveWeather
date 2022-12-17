@@ -16,5 +16,9 @@ export const nowWeatherAtom = atom({
     weatherTemp: '',
     weatherState: '',
     weatherDetail: '',
+    weatherTempMax: '',
+    weatherTempMin: '',
+    windDeg: '',
+    windSpeed: '',
   },
 });

@@ -2,8 +2,12 @@ import React from 'react';
 import { DataInfoBox } from './style';
 import { useRecoilValue } from 'recoil';
 import { currentLocation, nowTimeAtom, nowWeatherAtom } from '../../store/store';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay } from 'swiper';
+import 'swiper/swiper.min.css';
 
 const DataInfo = ({ resetInfo }: any) => {
+  SwiperCore.use([Autoplay]);
   const recoilLocation = useRecoilValue(currentLocation);
   const recoilNowTime = useRecoilValue(nowTimeAtom);
   const recoilNowWeather = useRecoilValue(nowWeatherAtom);
@@ -32,8 +36,34 @@ const DataInfo = ({ resetInfo }: any) => {
         </dl>
       </DataInfoBox>
       <DataInfoBox style={{ animationDelay: `1s` }}>
-        <div className="btn-reflesh">
-          <button type="button" onClick={() => resetInfo()}>
+        <div className="multi-box">
+          <Swiper
+            className="etc-info-slide"
+            direction={'vertical'}
+            autoHeight={true}
+            // loopedSlides={1}
+            autoplay={{ delay: 3000 }}
+          >
+            <SwiperSlide>
+              <p>
+                max temp : <span>{recoilNowWeather.weatherTempMax}</span>
+              </p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <p>
+                min temp : <span>{recoilNowWeather.weatherTempMin}</span>
+              </p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <p>
+                wind deg : <span>{recoilNowWeather.windDeg}</span>
+              </p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <p>wind speed : {recoilNowWeather.windSpeed}m/s</p>
+            </SwiperSlide>
+          </Swiper>
+          <button type="button" className="btn-reflesh" onClick={() => resetInfo()}>
             새로고침
           </button>
         </div>
