@@ -24,6 +24,8 @@ export const BgBoardImgBox = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
+  background: url(./images/bg_fewclouds.png) repeat-x 0 0 / cover;
+  animation: ${bgMotion} 40s linear infinite;
   z-index: 2;
   &.sky-is-clear {
     background: url(./images/bg_skyisclear.png) repeat-x 0 0 / cover;
