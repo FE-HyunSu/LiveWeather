@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { media } from '../../styles/theme';
 
 const viewMotion = keyframes`
   0%{opacity:0; transform:translateX(-3rem);}
@@ -153,6 +154,11 @@ export const DataInfoBox = styled.div`
       font-weight: 200;
       font-size: 2rem;
       color: rgba(255, 255, 255, 0.9);
+      transition: 0.3s;
+      ${media.tablet} {
+        padding-left: 2rem;
+        justify-content: flex-start;
+      }
       span {
         display: inline-block;
         position: relative;
