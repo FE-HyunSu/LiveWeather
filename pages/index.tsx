@@ -34,8 +34,8 @@ const Index = () => {
     try {
       await navigator.geolocation.getCurrentPosition((position) => {
         getInfoWeather(
-          Number(position.coords.latitude.toFixed(2)),
-          Number(position.coords.longitude.toFixed(2))
+          Number(Math.ceil(position.coords.latitude * 1000) / 1000),
+          Number(Math.ceil(position.coords.longitude * 1000) / 1000)
         );
       });
     } catch {
