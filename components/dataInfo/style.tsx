@@ -11,6 +11,12 @@ const turnMotion = keyframes`
   100%{transform:rotate(-360deg);}
 `;
 
+export const GroupBox = styled.section`
+  display: block;
+  height: 50rem;
+  overflow: hidden;
+`;
+
 export const DataInfoBox = styled.div`
   display: block;
   position: relative;
