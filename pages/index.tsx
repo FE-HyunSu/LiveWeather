@@ -33,10 +33,7 @@ const Index = () => {
   const setWeatherInfo = async () => {
     try {
       await navigator.geolocation.getCurrentPosition((position) => {
-        getInfoWeather(
-          Number(Math.ceil(position.coords.latitude * 1000) / 1000),
-          Number(Math.ceil(position.coords.longitude * 1000) / 1000)
-        );
+        getInfoWeather(Number(position.coords.latitude), Number(position.coords.longitude));
       });
     } catch {
       setLoading(false);
@@ -72,6 +69,7 @@ const Index = () => {
   useEffect(() => {
     setWeatherInfo();
     timer();
+    console.log(getInfoWeather);
   }, [isLoading]);
 
   return (
