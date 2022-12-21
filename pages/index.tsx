@@ -69,7 +69,6 @@ const Index = () => {
   useEffect(() => {
     setWeatherInfo();
     timer();
-    console.log(getInfoWeather);
   }, [isLoading]);
 
   return (

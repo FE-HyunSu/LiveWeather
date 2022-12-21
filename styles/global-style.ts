@@ -30,7 +30,6 @@ export const GlobalStyle = createGlobalStyle`
     }
     header + main{
         height: calc(100vh - 10.2rem);
-        padding-bottom: 8rem;
         text-align: center;
         box-sizing: border-box;
         overflow: auto;

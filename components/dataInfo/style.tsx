@@ -13,7 +13,7 @@ const turnMotion = keyframes`
 
 export const GroupBox = styled.section`
   display: block;
-  height: 50rem;
+  height: 46rem;
   overflow: hidden;
 `;
 
