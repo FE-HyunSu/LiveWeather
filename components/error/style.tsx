@@ -20,7 +20,7 @@ export const ErrorBoxUI = styled.div`
   &:before {
     content: '';
     position: absolute;
-    top: calc(50% - 4rem);
+    top: calc(50% - 3rem);
     right: 0;
     left: 0;
     width: 3rem;
@@ -48,6 +48,7 @@ export const ErrorBoxUI = styled.div`
     p {
       font-weight: 300;
       line-height: 1.2;
+      font-size: 1.3rem;
       text-align: center;
       color: #fff;
       button {
