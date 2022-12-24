@@ -13,7 +13,7 @@ const turnMotion = keyframes`
 
 export const GroupBox = styled.section`
   display: block;
-  height: 46rem;
+  height: 52rem;
   overflow: hidden;
 `;
 
@@ -65,10 +65,12 @@ export const DataInfoBox = styled.div`
       strong {
         display: block;
         position: relative;
+        padding-top: 1rem;
         font-weight: 200;
-        font-size: 4rem;
+        font-size: 3.8rem;
         color: rgba(255, 255, 255, 0.9);
         text-transform: uppercase;
+        word-break: keep-all;
         z-index: 2;
       }
       span {
@@ -94,7 +96,7 @@ export const DataInfoBox = styled.div`
       span {
         display: inline-block;
         position: relative;
-        padding-top: 0.5rem;
+        padding: 0.5rem 0 1rem;
         font-weight: 400;
         font-size: 1.2rem;
         color: rgba(255, 255, 255, 0.9);
