@@ -22,3 +22,11 @@ export const nowWeatherAtom = atom({
     windSpeed: '',
   },
 });
+
+export const locationAtom = atom({
+  key: 'locationAtom',
+  default: {
+    lat: 0,
+    lng: 0,
+  },
+});
