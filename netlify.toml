@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "/req"
+  to = "https://api.vworld.kr/req"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
