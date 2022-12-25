@@ -1,7 +1,7 @@
 [[redirects]]
-  from = "/req"
-  to = "https://api.vworld.kr/req"
-  status = 200
+  from = "/api/"
+  to = "https://api.vworld.kr/"
+  status = 301
   force = true
   headers = {X-From = "Netlify"}
 [[headers]]
