@@ -5,6 +5,11 @@ const loadingMotion = keyframes`
   100%{transform:rotate(360deg);}
 `;
 
+const viewMotion = keyframes`
+  0%{margin-top:-1rem; opacity:0;}
+  100%{margin-top:0; opacity:1;}
+`;
+
 export const ErrorBoxUI = styled.div`
   display: block;
   position: absolute;
@@ -20,7 +25,7 @@ export const ErrorBoxUI = styled.div`
   &:before {
     content: '';
     position: absolute;
-    top: calc(50% - 3rem);
+    top: calc(50% - 4rem);
     right: 0;
     left: 0;
     width: 3rem;
@@ -58,6 +63,18 @@ export const ErrorBoxUI = styled.div`
         line-height: 1.2;
         text-align: center;
         color: #fff;
+      }
+      em {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-top: -1rem;
+        font-weight: 300;
+        font-size: 1.3rem;
+        color: #fff;
+        opacity: 0;
+        animation: ${viewMotion} 1s 2s forwards;
+        z-index: 2;
       }
     }
   }

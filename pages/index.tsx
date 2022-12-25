@@ -55,7 +55,6 @@ const Index = () => {
 
   const weatherDataSet = () => {
     const data = isNowWeatherData.data;
-    // setUseLocation(data.name);
     setNowWeatherAtom({
       weatherTemp: data.main.temp,
       weatherState: data.weather[0].main,
