@@ -37,7 +37,7 @@ export const LoadingBox = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 3rem;
+    bottom: 5rem;
     left: 0;
     width: 3rem;
     height: 3rem;
