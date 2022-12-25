@@ -40,7 +40,6 @@ const Index = () => {
   const setWeatherInfo = async () => {
     try {
       await navigator.geolocation.getCurrentPosition((position) => {
-        console.log(position.coords.latitude, position.coords.longitude);
         getInfoWeather(Number(position.coords.latitude), Number(position.coords.longitude));
         setPosition({
           lat: Number(position.coords.latitude),
