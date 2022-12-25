@@ -10,6 +10,6 @@ export const getWeatherInfo = async (lat: Number, lon: Number) => {
 
 export const getGeoCode = async (lat: Number, lon: Number) => {
   return await axios.get(
-    `/req/address?service=address&request=getAddress&point=${lon},${lat}&type=both&zipcode=true&simple=false&key=${mapKey}`
+    `/api/req/address?service=address&request=getAddress&point=${lon},${lat}&type=both&zipcode=true&simple=false&key=${mapKey}`
   );
 };
