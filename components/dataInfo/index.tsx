@@ -47,21 +47,21 @@ const DataInfo = ({ resetInfo }: any) => {
             >
               <SwiperSlide>
                 <p>
-                  ☀️ max temp : <span>{recoilNowWeather.weatherTempMax}</span>
+                  ☀️ 최고기온 : <span>&nbsp;{recoilNowWeather.weatherTempMax}</span>
                 </p>
               </SwiperSlide>
               <SwiperSlide>
                 <p>
-                  🌥 min temp : <span>{recoilNowWeather.weatherTempMin}</span>
+                  🌥 최저기온 : <span>&nbsp;{recoilNowWeather.weatherTempMin}</span>
                 </p>
               </SwiperSlide>
               <SwiperSlide>
                 <p>
-                  🧭 wind deg : <span>{recoilNowWeather.windDeg}</span>
+                  🧭 풍향 : <span>&nbsp;{recoilNowWeather.windDeg}</span>
                 </p>
               </SwiperSlide>
               <SwiperSlide>
-                <p>🌊 wind speed : {recoilNowWeather.windSpeed}m/s</p>
+                <p>🌊 풍속 : {recoilNowWeather.windSpeed}m/s</p>
               </SwiperSlide>
             </Swiper>
             <button type="button" className="btn-reflesh" onClick={() => resetInfo()}>
