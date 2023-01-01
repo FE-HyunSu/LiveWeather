@@ -14,7 +14,7 @@
 - 날씨 정보에 맞춰 관련 정보 및 이미지를 제공.
 - dayjs로 라이브 시간대별 화면 밝기 적용.
 
-### 🏂 URL.
+### 🏂 URL [![Netlify Status](https://api.netlify.com/api/v1/badges/39ea5050-ae95-47a2-ba5c-0c01a7303a6d/deploy-status)](https://app.netlify.com/sites/hsliveweather/deploys)
 
 - page : [https://hsliveweather.netlify.app](https://hsliveweather.netlify.app)
 
