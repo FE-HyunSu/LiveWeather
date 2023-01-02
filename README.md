@@ -1,8 +1,8 @@
-## 🌦 Live Weather information.
+## [![Netlify Status](https://api.netlify.com/api/v1/badges/39ea5050-ae95-47a2-ba5c-0c01a7303a6d/deploy-status)](https://app.netlify.com/sites/hsliveweather/deploys)<br/>🌦 Live Weather information.
 
 ### 🧑‍💻 프로젝트 개요.
 
-- 현재 내 위치를 기반으로, 날씨 정보를 제공.
+- 현재 내 위치를 기반으로, 날씨 정보를 제공하는 서비스.
 
 ### 👩‍🚀 구현 내용.
 
@@ -14,7 +14,7 @@
 - 날씨 정보에 맞춰 관련 정보 및 이미지를 제공.
 - dayjs로 라이브 시간대별 화면 밝기 적용.
 
-### 🏂 URL [![Netlify Status](https://api.netlify.com/api/v1/badges/39ea5050-ae95-47a2-ba5c-0c01a7303a6d/deploy-status)](https://app.netlify.com/sites/hsliveweather/deploys)
+### 🏂 URL
 
 - page : [https://hsliveweather.netlify.app](https://hsliveweather.netlify.app)
 
